@@ -26,6 +26,7 @@ func main() {
 	homeHandler := handlers.NewHomeHandler(categoryRepo)
 
 	http.Handle("/", homeHandler)
+	http.HandleFunc("/category/", handlers.CategoryPage(db))
 
 	log.Println("Сервер запущен: http://localhost:8080")
 	http.ListenAndServe(":8080", nil)

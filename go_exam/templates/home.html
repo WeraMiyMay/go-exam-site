@@ -2,22 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Экологическое тестирование</title>
+    <title>Экзамен</title>
 </head>
 <body>
-    <h1>Выберите категорию тестирования</h1>
 
-    {{if .}}
-        <ul>
-        {{range .}}
-            <li>
-                <strong>{{.Name}}</strong><br>
-                <small>{{.Description}}</small>
-            </li>
-        {{end}}
-        </ul>
-    {{else}}
-        <p>Категории пока не добавлены</p>
-    {{end}}
+<h1>Выберите категорию тестирования</h1>
+
+<ul>
+    {{ range . }}
+    <li>
+        <a href="/category/{{ .ID }}">
+            <strong>{{ .Name }}</strong>
+        </a><br>
+        {{ .Description }}
+    </li>
+    {{ end }}
+</ul>
+
 </body>
 </html>

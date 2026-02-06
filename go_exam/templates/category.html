@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Category.Name }}</title>
+</head>
+<body>
+
+<h1>{{ .Category.Name }}</h1>
+<p>{{ .Category.Description }}</p>
+
+<form method="post" action="/exam/start">
+    <input type="hidden" name="category_id" value="{{ .Category.ID }}">
+
+    <label>
+        ФИО:<br>
+        <input type="text" name="full_name" required>
+    </label><br><br>
+
+    <label>
+        Табельный номер:<br>
+        <input type="text" name="employee_id" required>
+    </label><br><br>
+
+    <label>
+        Должность:<br>
+        <input type="text" name="position" required>
+    </label><br><br>
+
+    <button type="submit">Начать тест</button>
+</form>
+
+</body>
+</html>
