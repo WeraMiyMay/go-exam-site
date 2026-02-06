@@ -1,0 +1,42 @@
+# ======================
+# Go
+# ======================
+/bin/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# ======================
+# SQLite / Database
+# ======================
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# ======================
+# Logs
+# ======================
+*.log
+
+# ======================
+# Environment variables
+# ======================
+.env
+
+# ======================
+# VS Code
+# ======================
+.vscode/
+!.vscode/extensions.json
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
+
+!data/.gitkeep

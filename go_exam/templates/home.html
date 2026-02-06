@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Экологическое тестирование</title>
+</head>
+<body>
+    <h1>Выберите категорию тестирования</h1>
+
+    {{if .}}
+        <ul>
+        {{range .}}
+            <li>
+                <strong>{{.Name}}</strong><br>
+                <small>{{.Description}}</small>
+            </li>
+        {{end}}
+        </ul>
+    {{else}}
+        <p>Категории пока не добавлены</p>
+    {{end}}
+</body>
+</html>
