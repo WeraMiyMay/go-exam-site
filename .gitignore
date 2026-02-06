@@ -1,3 +1,5 @@
+!data/.gitkeep
+
 # ======================
 # Go
 # ======================
@@ -39,4 +41,4 @@ data/*.db-shm
 .DS_Store
 Thumbs.db
 
-!data/.gitkeep
+
